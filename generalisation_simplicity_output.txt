@@ -1,0 +1,65 @@
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pm4py/utils.py:1027: UserWarning: Install the optional requirement `r4pm` to import/export files faster. `rustxes` remains supported as a fallback.
+  warnings.warn(
+
+parsing log, completed traces ::   0%|          | 0/1050 [00:00<?, ?it/s]
+parsing log, completed traces ::  26%|██▌       | 272/1050 [00:00<00:00, 2717.91it/s]
+parsing log, completed traces ::  62%|██████▏   | 648/1050 [00:00<00:00, 3319.25it/s]
+parsing log, completed traces :: 100%|██████████| 1050/1050 [00:00<00:00, 3505.41it/s]
+=== Aggregate metrics for Alpha Miner ===
+
+replaying log with TBR, completed traces ::   0%|          | 0/846 [00:00<?, ?it/s]
+replaying log with TBR, completed traces ::  38%|███▊      | 318/846 [00:00<00:00, 3152.75it/s]
+replaying log with TBR, completed traces ::  75%|███████▍  | 634/846 [00:00<00:00, 2958.12it/s]
+replaying log with TBR, completed traces :: 100%|██████████| 846/846 [00:00<00:00, 2966.02it/s]
+Alpha TBR fitness dict: {'perc_fit_traces': 0.0, 'average_trace_fitness': 0.2940004314960977, 'log_fitness': 0.26588961197193384, 'percentage_of_fitting_traces': 0.0}
+
+aligning log, completed variants ::   0%|          | 0/846 [00:00<?, ?it/s]
+aligning log, completed variants ::   7%|▋         | 57/846 [00:00<00:01, 550.57it/s]
+aligning log, completed variants ::  13%|█▎        | 113/846 [00:00<00:01, 546.47it/s]
+aligning log, completed variants ::  20%|█▉        | 168/846 [00:00<00:01, 515.33it/s]
+aligning log, completed variants ::  26%|██▌       | 220/846 [00:00<00:01, 513.08it/s]
+aligning log, completed variants ::  32%|███▏      | 272/846 [00:00<00:01, 473.01it/s]
+aligning log, completed variants ::  38%|███▊      | 320/846 [00:00<00:01, 437.99it/s]
+aligning log, completed variants ::  44%|████▍     | 372/846 [00:00<00:01, 459.77it/s]
+aligning log, completed variants ::  50%|████▉     | 419/846 [00:01<00:02, 213.11it/s]
+aligning log, completed variants ::  55%|█████▍    | 464/846 [00:01<00:01, 250.90it/s]
+aligning log, completed variants ::  59%|█████▉    | 502/846 [00:01<00:01, 252.31it/s]
+aligning log, completed variants ::  65%|██████▌   | 552/846 [00:01<00:00, 300.79it/s]
+aligning log, completed variants ::  72%|███████▏  | 605/846 [00:01<00:00, 350.53it/s]
+aligning log, completed variants ::  78%|███████▊  | 656/846 [00:01<00:00, 387.15it/s]
+aligning log, completed variants ::  83%|████████▎ | 704/846 [00:01<00:00, 409.18it/s]
+aligning log, completed variants ::  89%|████████▊ | 750/846 [00:02<00:00, 409.76it/s]
+aligning log, completed variants ::  94%|█████████▍| 795/846 [00:02<00:00, 383.11it/s]
+aligning log, completed variants ::  99%|█████████▉| 836/846 [00:02<00:00, 369.83it/s]
+aligning log, completed variants :: 100%|██████████| 846/846 [00:02<00:00, 363.68it/s]
+Alpha Alignment fitness dict: {'percFitTraces': 0.0, 'averageFitness': 0.1734225992628356, 'percentage_of_fitting_traces': 0.0, 'average_trace_fitness': 0.1734225992628356, 'log_fitness': 0.13631333005410728}
+
+replaying log with TBR, completed traces ::   0%|          | 0/5886 [00:00<?, ?it/s]
+replaying log with TBR, completed traces ::  21%|██▏       | 1251/5886 [00:00<00:00, 12500.62it/s]
+replaying log with TBR, completed traces ::  43%|████▎     | 2502/5886 [00:00<00:00, 9562.83it/s] 
+replaying log with TBR, completed traces ::  61%|██████▏   | 3614/5886 [00:00<00:00, 10169.72it/s]
+replaying log with TBR, completed traces ::  79%|███████▉  | 4664/5886 [00:00<00:00, 9000.01it/s] 
+replaying log with TBR, completed traces :: 100%|██████████| 5886/5886 [00:00<00:00, 9702.02it/s]
+Alpha Precision (escaping edges): 0.4426422388436003
+
+=== Generalisation and Simplicity for Alpha Miner ===
+
+replaying log with TBR, completed traces ::   0%|          | 0/846 [00:00<?, ?it/s]
+replaying log with TBR, completed traces ::  37%|███▋      | 315/846 [00:00<00:00, 3147.29it/s]
+replaying log with TBR, completed traces ::  74%|███████▍  | 630/846 [00:00<00:00, 2928.55it/s]
+replaying log with TBR, completed traces :: 100%|██████████| 846/846 [00:00<00:00, 2941.72it/s]
+Alpha Generalisation (TBR): 0.9131789227698267
+Alpha Simplicity: 0.4782608695652174
+
+=== Generalisation and Simplicity for Inductive Miner ===
+
+replaying log with TBR, completed traces ::   0%|          | 0/846 [00:00<?, ?it/s]
+replaying log with TBR, completed traces ::  18%|█▊        | 154/846 [00:00<00:00, 1535.99it/s]
+replaying log with TBR, completed traces ::  36%|███▋      | 308/846 [00:00<00:00, 1394.02it/s]
+replaying log with TBR, completed traces ::  53%|█████▎    | 449/846 [00:00<00:00, 1320.36it/s]
+replaying log with TBR, completed traces ::  69%|██████▉   | 582/846 [00:00<00:00, 1303.04it/s]
+replaying log with TBR, completed traces ::  84%|████████▍ | 713/846 [00:00<00:00, 1267.30it/s]
+replaying log with TBR, completed traces :: 100%|█████████▉| 845/846 [00:00<00:00, 1282.33it/s]
+replaying log with TBR, completed traces :: 100%|██████████| 846/846 [00:00<00:00, 1301.47it/s]
+Inductive Generalisation (TBR): 0.9024534736155712
+Inductive Simplicity: 0.6223776223776223

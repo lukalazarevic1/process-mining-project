@@ -5,13 +5,13 @@ print("Reading log...")
 log = pm4py.read_xes("Sepsis Cases - Event Log.xes.gz")
 print("Log loaded.\n")
 
-# Re-discover both models
+
 print("Discovering models...")
 alpha_net, alpha_im, alpha_fm = pm4py.discover_petri_net_alpha(log)
 ind_net, ind_im, ind_fm = pm4py.discover_petri_net_inductive(log)
 print("Models discovered.\n")
 
-# --- Token-based replay fitness ---
+
 print("Computing token-based replay fitness (Alpha)...")
 t0 = time.time()
 alpha_fit_tbr = pm4py.fitness_token_based_replay(log, alpha_net, alpha_im, alpha_fm)
@@ -24,7 +24,7 @@ ind_fit_tbr = pm4py.fitness_token_based_replay(log, ind_net, ind_im, ind_fm)
 print(f"  Done in {time.time()-t0:.1f}s")
 print("  Inductive — TBR fitness:", ind_fit_tbr, "\n")
 
-# --- Precision (token-based) ---
+
 print("Computing precision (Alpha)...")
 t0 = time.time()
 alpha_prec = pm4py.precision_token_based_replay(log, alpha_net, alpha_im, alpha_fm)
@@ -37,9 +37,6 @@ ind_prec = pm4py.precision_token_based_replay(log, ind_net, ind_im, ind_fm)
 print(f"  Done in {time.time()-t0:.1f}s")
 print("  Inductive — precision:", ind_prec, "\n")
 
-# --- Alignment-based fitness (slower but more accurate) ---
-# If this takes more than a few minutes, you can press Ctrl+C to interrupt
-# and report just the token-based numbers above.
 print("Computing alignment-based fitness (Alpha) — this may take a few minutes...")
 t0 = time.time()
 alpha_fit_ali = pm4py.fitness_alignments(log, alpha_net, alpha_im, alpha_fm)
@@ -52,7 +49,7 @@ ind_fit_ali = pm4py.fitness_alignments(log, ind_net, ind_im, ind_fm)
 print(f"  Done in {time.time()-t0:.1f}s")
 print("  Inductive — alignment fitness:", ind_fit_ali, "\n")
 
-# --- Summary table ---
+
 print("="*60)
 print("SUMMARY")
 print("="*60)
