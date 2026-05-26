@@ -25,3 +25,27 @@ print("End activities:", end_activities)
 
 variants = pm4py.get_variants(log)
 print("\nNumber of variants:", len(variants))
+
+
+# === Directly-follows graph for visual log overview ===
+# Keep only the top-K variants by frequency, then build the DFG of that subset.
+# This avoids the visualiser's KeyError on orphan activities and gives a clean
+# overview of the log's dominant behaviour.
+
+def variant_size(v):
+    # PM4Py versions disagree: some return a list of traces per variant, some an int count.
+    return v if isinstance(v, int) else len(v)
+
+K = 20
+sorted_variants = sorted(variants.items(), key=lambda x: -variant_size(x[1]))
+top_variant_keys = [v[0] for v in sorted_variants[:K]]
+
+log_top = pm4py.filter_variants(log, top_variant_keys)
+
+dfg_f, sa_f, ea_f = pm4py.discover_dfg(log_top)
+pm4py.save_vis_dfg(dfg_f, sa_f, ea_f, "sepsis_dfg.png")
+
+covered_cases = sum(variant_size(v[1]) for v in sorted_variants[:K])
+print(f"\nDirectly-follows graph saved to sepsis_dfg.png "
+      f"(top {K} variants, covering {covered_cases} of "
+      f"{log['case:concept:name'].nunique()} cases)")
